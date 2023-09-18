@@ -20,7 +20,7 @@ if 'Kali' in release:
                            'golang', 'exif', 'hexedit', 'jq', 'curl', 'filezilla', 'net-tools',
                            'tmux', 'bash-completion', 'ieee-data', 'powercat', 'cewl', 'nbtscan', 
                            'tree', 'grc', 'passing-the-hash', 'evil-winrm', 'mimikatz', 
-                           'feroxbuster', 'ffuf', 'bloodhound', 'hashdeep',
+                           'feroxbuster', 'ffuf', 'bloodhound', 'hashdeep', 'freerdp-dev',
                            'crackmapexec', 'creddump7', 'hping3', 'dos2unix', 'dotdotpwn', 'impacket-scripts',
                            'nishang', 'onesixtyone', 'kerberoast', 'patator', 'powersploit',
                            'powershell-empire', 'pwncat', 'python-pip', 'python-virtualenv', 'rdesktop',

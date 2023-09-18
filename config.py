@@ -25,7 +25,7 @@ if 'Kali' in release:
                            'nishang', 'onesixtyone', 'kerberoast', 'patator', 'powersploit',
                            'powershell-empire', 'pwncat', 'python3-pip', 'python3-virtualenv', 'rdesktop',
                            'seclists', 'secure-socket-funneling-windows-binaries', 'sherlock', 'smbmap',
-                           'snmpcheck', 'windows-privesc-check', 'rlwrap', 'whatweb']
+                           'snmpcheck', 'windows-privesc-check', 'rlwrap', 'whatweb', 'wpscan']
 
     # These kali packages will be removed
     packages_to_remove = []
@@ -35,7 +35,7 @@ if 'Kali' in release:
                     'pyperclip3', 'updog', 'pwnshelter', 'colorama', 'readchar', 'netifaces']
 
     # These gem packages will be installed globally
-    gem_packages = ['wpscan']
+    gem_packages = []
 
     # These go tools will be installed globally. You will need to have the following settings in your
     # .bashrc already:

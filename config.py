@@ -31,7 +31,7 @@ if 'Kali' in release:
     packages_to_remove = []
 
     # These python packages will be installed globally
-    pip_packages = ['pipenv', 'pylint', 'defaultcreds-cheat-sheet', 'wesng', 'certipy-ad', 'pycryptodomex', 'gssapi', 'ldap3', 'pywerview', 'terminator', 
+    pip_packages = ['pipenv', 'pylint', 'defaultcreds-cheat-sheet', 'wesng', 'certipy-ad', 'pycryptodomex', 'ldap3', 'pywerview', 'terminator', 
                     'pyperclip3', 'updog', 'pwnshelter', 'colorama', 'readchar', 'netifaces']
 
     # These gem packages will be installed globally

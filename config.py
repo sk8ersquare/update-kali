@@ -23,7 +23,7 @@ if 'Kali' in release:
                            'feroxbuster', 'ffuf', 'bloodhound', 'hashdeep', 'freerdp2-dev',
                            'crackmapexec', 'creddump7', 'hping3', 'dos2unix', 'dotdotpwn', 'impacket-scripts',
                            'nishang', 'onesixtyone', 'kerberoast', 'patator', 'powersploit',
-                           'powershell-empire', 'pwncat', 'python-pip', 'python-virtualenv', 'rdesktop',
+                           'powershell-empire', 'pwncat', 'python3-pip', 'python3-virtualenv', 'rdesktop',
                            'seclists', 'secure-socket-funneling-windows-binaries', 'sherlock', 'smbmap',
                            'snmpcheck', 'windows-privesc-check', 'rlwrap', 'whatweb']
 

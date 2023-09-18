@@ -8,8 +8,8 @@ import sys
 import argparse
 from updateactions import (print_message, elevate_privileges, take_ownership, update_packages,
                            install_package, remove_package, pip_package_install,gem_package_install,
-                           create_directory, remove_directory, sync_git_repo,
-                           run_scripts, update_pip_packages, update_gems)
+                           install_golang_module, create_directory, remove_directory, sync_git_repo,
+                           run_scripts, update_pip_packages, update_gems, update_go_packages)
 from config import (personal_repo_directory, external_tools_directory, directories_to_remove,
                     packages_to_install, packages_to_remove, pip_packages, gem_packages,
                     ext_repositories_to_sync,

@@ -12,8 +12,8 @@ from updateactions import (print_message, elevate_privileges, take_ownership, up
                            run_scripts, update_pip_packages, update_gems, update_go_packages)
 from config import (personal_repo_directory, external_tools_directory, directories_to_remove,
                     packages_to_install, packages_to_remove, pip_packages, gem_packages,
-                    ext_repositories_to_sync,
-                    personal_repositories_to_sync)
+                    golang_modules_to_install, ext_repositories_to_sync,
+                    personal_repositories_to_sync, golang_install_directory)
 
 def main():
     argument_parser = argparse.ArgumentParser(description="update-kali is a tool for rapidly configuring Kali linux " +

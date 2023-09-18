@@ -43,13 +43,14 @@ if 'Kali' in release:
     # export GOROOT=/usr/lib/go
     # export GOPATH=$HOME/go
     # export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-    #golang_install_directory = '/opt'
-    #golang_modules_to_install = [
-    #                            'github.com/lc/gau',
-    #                            'github.com/ropnop/go-windapsearch',
-    #                            'github.com/ropnop/kerbrute',
-    #                            'github.com/CristinaSolana/ggtfobins'
-    #                            ]
+    
+    golang_install_directory = '/opt'
+    golang_modules_to_install = [
+                                'github.com/lc/gau',
+                                'github.com/ropnop/go-windapsearch',
+                                'github.com/ropnop/kerbrute',
+                                'github.com/CristinaSolana/ggtfobins'
+                                ]
 
     # These git repositories will be synced to the 'external repo' directory
     external_tools_directory = '/opt'

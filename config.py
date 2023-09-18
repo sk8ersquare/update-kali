@@ -22,7 +22,7 @@ if 'Kali' in release:
                            'tree', 'grc', 'passing-the-hash', 'evil-winrm', 'mimikatz', 
                            'feroxbuster', 'ffuf', 'bloodhound', 'hashdeep',
                            'crackmapexec', 'creddump7', 'hping3', 'dos2unix', 'dotdotpwn', 'impacket-scripts',
-                           'nishang', 'onesixtyone', 'kerberoast', 'patator', 'peass-ng', 'powersploit',
+                           'nishang', 'onesixtyone', 'kerberoast', 'patator', 'powersploit',
                            'powershell-empire', 'pwncat', 'python-pip', 'python-virtualenv', 'rdesktop',
                            'seclists', 'secure-socket-funneling-windows-binaries', 'sherlock', 'smbmap',
                            'snmpcheck', 'windows-privesc-check', 'rlwrap', 'whatweb']

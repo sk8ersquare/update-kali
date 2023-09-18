@@ -110,7 +110,8 @@ if 'Kali' in release:
                                 'https://github.com/CoolHandSquid/TireFire/tree/TireFire_V4',
                                 'https://github.com/antonioCoco/ConPtyShell',
                                 'https://github.com/wirzka/incursore',
-                                'https://github.com/ropnop/impacket_static_binaries/releases/tag/0.9.22.dev-binaries'  
+                                'https://github.com/ropnop/impacket_static_binaries/releases/tag/0.9.22.dev-binaries', 
+                                'https://github.com/carlospolop/PEASS-ng/releases/tag/20230917-ec588706'
                                 ]
 
     # These git repositories will be synced to the 'personal repo' directory. I use my home directory.

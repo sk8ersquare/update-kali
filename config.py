@@ -91,7 +91,7 @@ if 'Kali' in release:
                                 'https://github.com/CMEPW/keepass-dump-masterkey',
                                 'https://github.com/Orange-Cyberdefense/KeePwn',
                                 'https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.5/LaZagne.exe',
-                                'https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/',
+                                'https://github.com/r3motecontrol/Ghostpack-CompiledBinaries.git',
                                 'https://github.com/n00py/LAPSDumper',
                                 'https://github.com/Hackndo/lsassy',
                                 'https://github.com/S3cur3Th1sSh1t/PowerSharpPack',

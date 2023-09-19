@@ -129,6 +129,12 @@ def sync_git_repo(gitrepo, repo_collection_dir):
     # Check if it's a release URL
     if "releases/download" in gitrepo:
         release_name = gitrepo.split("/")[-1]
+        
+        # Check if the release already exists
+        if os.path.exists(f"{repo_collection_dir}/{release_name}"):
+            print_message("blue", f"Release {release_name} already exists. Skipping.")
+            return
+        
         print_message("green", "Downloading release " + release_name)
         cmdstring = f"wget {gitrepo} -O {repo_collection_dir}/{release_name}"
         os.system(cmdstring)

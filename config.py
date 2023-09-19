@@ -75,7 +75,7 @@ if 'Kali' in release:
                                 'https://github.com/Tib3rius/Windows-PrivEsc-Tools',
                                 'https://github.com/Tib3rius/Linux-PrivEsc-Tools',
                                 'https://github.com/61106960/adPEAS',
-                                'https://github.com/nicocha30/ligolo-ng/releases/download/v0.4.4/ligolo-ng_proxy_0.4.4_linux_arm64.tar.gz'
+                                'https://github.com/nicocha30/ligolo-ng/releases/download/v0.4.4/ligolo-ng_proxy_0.4.4_linux_arm64.tar.gz',
                                 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.4.4/ligolo-ng_agent_0.4.4_windows_amd64.zip',
                                 'https://github.com/nicocha30/ligolo-ng/releases/download/v0.4.4/ligolo-ng_agent_0.4.4_linux_amd64.tar.gz',
                                 'https://github.com/cddmp/enum4linux-ng',

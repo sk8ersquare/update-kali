@@ -122,22 +122,37 @@ def remove_directory(directory):
 #        cmdstring = "git clone " + gitrepo + ' ' + repo_collection_dir + '/' + repo_name
 #        os.system(cmdstring)
 
+import zipfile
+
 def sync_git_repo(gitrepo, repo_collection_dir):
-    """ Sync the specified git repository or download individual releases """
+    """ Sync the specified git repository, download individual releases and extract ZIP files """
     repo_name = gitrepo.split("/")[-1].lower()
     
     # Check if it's a release URL
     if "releases/download" in gitrepo:
+        git_name = gitrepo.split("/")[4]  # Extract the git name from the URL
         release_name = gitrepo.split("/")[-1]
+        release_folder = os.path.join(repo_collection_dir, git_name)  # Create a folder named after the git name
+        
+        # Create the folder if it doesn't exist
+        if not os.path.exists(release_folder):
+            os.makedirs(release_folder)
         
         # Check if the release already exists
-        if os.path.exists(f"{repo_collection_dir}/{release_name}"):
-            print_message("blue", f"Release {release_name} already exists. Skipping.")
+        full_release_path = os.path.join(release_folder, release_name)
+        if os.path.exists(full_release_path):
+            print_message("blue", f"Release {release_name} already exists in {release_folder}. Skipping.")
             return
         
-        print_message("green", "Downloading release " + release_name)
-        cmdstring = f"wget {gitrepo} -O {repo_collection_dir}/{release_name}"
+        print_message("green", f"Downloading release {release_name} into {release_folder}")
+        cmdstring = f"wget {gitrepo} -O {full_release_path}"
         os.system(cmdstring)
+        
+        # Extract ZIP files
+        if release_name.endswith('.zip'):
+            print_message("green", f"Extracting ZIP file {release_name}")
+            with zipfile.ZipFile(full_release_path, 'r') as zip_ref:
+                zip_ref.extractall(release_folder)
         return
     
     # Otherwise, it's a git repo

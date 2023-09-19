@@ -122,10 +122,12 @@ def remove_directory(directory):
 #        cmdstring = "git clone " + gitrepo + ' ' + repo_collection_dir + '/' + repo_name
 #        os.system(cmdstring)
 
+
 import zipfile
+import tarfile
 
 def sync_git_repo(gitrepo, repo_collection_dir):
-    """ Sync the specified git repository, download individual releases and extract ZIP files """
+    """ Sync the specified git repository, download individual releases and extract ZIP and .tar.gz files """
     repo_name = gitrepo.split("/")[-1].lower()
     
     # Check if it's a release URL
@@ -150,9 +152,21 @@ def sync_git_repo(gitrepo, repo_collection_dir):
         
         # Extract ZIP files
         if release_name.endswith('.zip'):
-            print_message("green", f"Extracting ZIP file {release_name}")
-            with zipfile.ZipFile(full_release_path, 'r') as zip_ref:
-                zip_ref.extractall(release_folder)
+            try:
+                print_message("green", f"Extracting ZIP file {release_name}")
+                with zipfile.ZipFile(full_release_path, 'r') as zip_ref:
+                    zip_ref.extractall(release_folder)
+            except zipfile.BadZipFile:
+                print_message("error", f"{release_name} is not a valid ZIP file.")
+        
+        # Extract .tar.gz files
+        elif release_name.endswith('.tar.gz'):
+            try:
+                print_message("green", f"Extracting .tar.gz file {release_name}")
+                with tarfile.open(full_release_path, 'r:gz') as tar_ref:
+                    tar_ref.extractall(path=release_folder)
+            except tarfile.ReadError:
+                print_message("error", f"{release_name} is not a valid .tar.gz file.")
         return
     
     # Otherwise, it's a git repo
@@ -165,6 +179,7 @@ def sync_git_repo(gitrepo, repo_collection_dir):
         print_message("green", "Cloning " + repo_name)
         cmdstring = "git clone " + gitrepo + ' ' + repo_collection_dir + '/' + repo_name
         os.system(cmdstring)
+
 
 def run_scripts():
     """ Run each .sh or .py file in the scripts directory """

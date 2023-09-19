@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
+import subprocess
 import string
 from datetime import datetime
 
@@ -108,9 +109,32 @@ def remove_directory(directory):
         cmdstring = "rmdir " + directory
         os.system(cmdstring)
 
+#def sync_git_repo(gitrepo, repo_collection_dir):
+#    """ Sync the specified git repository """
+#    repo_name = gitrepo.split("/")[-1].lower()
+#    if os.path.exists(repo_collection_dir + '/' + repo_name):
+#        print_message("yellow", "Syncing " + repo_name + ": ")
+#        sys.stdout.flush()
+#        cmdstring = "git -C " + repo_collection_dir + '/' + repo_name + " pull"
+#        os.system(cmdstring)
+#    else:
+#        print_message("green", "Cloning " + repo_name)
+#        cmdstring = "git clone " + gitrepo + ' ' + repo_collection_dir + '/' + repo_name
+#        os.system(cmdstring)
+
 def sync_git_repo(gitrepo, repo_collection_dir):
-    """ Sync the specified git repository """
+    """ Sync the specified git repository or download individual releases """
     repo_name = gitrepo.split("/")[-1].lower()
+    
+    # Check if it's a release URL
+    if "releases/download" in gitrepo:
+        release_name = gitrepo.split("/")[-1]
+        print_message("green", "Downloading release " + release_name)
+        cmdstring = f"wget {gitrepo} -O {repo_collection_dir}/{release_name}"
+        os.system(cmdstring)
+        return
+    
+    # Otherwise, it's a git repo
     if os.path.exists(repo_collection_dir + '/' + repo_name):
         print_message("yellow", "Syncing " + repo_name + ": ")
         sys.stdout.flush()

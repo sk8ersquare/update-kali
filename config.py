@@ -233,7 +233,8 @@ if 'Kali' in release:
                                 'https://github.com/ropnop/impacket_static_binaries/releases/download/0.9.22.dev-binaries/wmiquery_linux_x86_64',
                                 'https://github.com/ropnop/impacket_static_binaries/releases/download/0.9.22.dev-binaries/wmiquery_windows.exe',
                                 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe',
-                                'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe'
+                                'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe',
+                                'https://github.com/itm4n/FullPowers/releases/download/v0.1/FullPowers.exe'
                                 ]
 
     # These git repositories will be synced to the 'personal repo' directory. I use my home directory.

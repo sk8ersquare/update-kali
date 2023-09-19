@@ -19,7 +19,8 @@ def elevate_privileges():
     return status
 
 def take_ownership(directory):
-    username = os.path.expanduser("~").split('/')[3]
+    #username = os.path.expanduser("~").split('/')[3]
+    username = "parallels"
     cmdstring = "sudo chown " + username + ":" + username + " " + directory
     os.system(cmdstring)
 

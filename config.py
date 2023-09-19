@@ -25,7 +25,8 @@ if 'Kali' in release:
                            'nishang', 'onesixtyone', 'kerberoast', 'patator', 'powersploit',
                            'powershell-empire', 'pwncat', 'python3-pip', 'python3-virtualenv', 'rdesktop',
                            'seclists', 'secure-socket-funneling-windows-binaries', 'sherlock', 'smbmap',
-                           'snmpcheck', 'windows-privesc-check', 'rlwrap', 'whatweb', 'wpscan']
+                           'snmpcheck', 'windows-privesc-check', 'rlwrap', 'whatweb', 'wpscan', 'tnscmd10g',
+                            'wkhtmltopdf', 'oscanner']
 
     # These kali packages will be removed
     packages_to_remove = []

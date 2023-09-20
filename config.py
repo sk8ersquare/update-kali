@@ -235,6 +235,7 @@ if 'Kali' in release:
                                 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe',
                                 'https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe',
                                 'https://github.com/itm4n/FullPowers/releases/download/v0.1/FullPowers.exe'
+                                'https://github.com/itm4n/PrivescCheck'
                                 ]
 
     # These git repositories will be synced to the 'personal repo' directory. I use my home directory.
